@@ -20,16 +20,22 @@
         background-color: black;
     }
     header {
+        height: 220px;
+        width: 100%;
+        position: relative;
+        border-bottom: solid 3rem black;
+    }
+    .background-image0 {
         background-image: url("https://guiameunegocioonline.com/wp-content/uploads/2023/07/primeira-venda-na-kiwifi.jpg");
-        background-size: 600px 800px; /* Tamanho fixo da imagem de fundo */
+        background-size: 600px 800px;
         background-position: center;
         background-repeat: no-repeat;
         height: 220px;
         width: 100%;
         position: relative;
         border-bottom: solid 3rem black;
-    }    
-    
+        animation: fadeIn 2s ease-out forwards; /* Aplica a animação */
+    }        
     .background-image {
         position: absolute;
         top: 0;
@@ -39,7 +45,7 @@
         background-image: url("https://guiameunegocioonline.com/wp-content/uploads/2023/07/primeira-venda-na-kiwifi.jpg");
         background-size: cover;
         background-position: center;
-        z-index: -1;
+        animation: fadeIn 2s ease-out forwards; /* Aplica a animação */
     }
     
     @media screen and (min-width: 768px) {
@@ -57,6 +63,7 @@
     }
     
     .imagem-wrapper {
+        background-color: black;
         margin-top: 15rem;
         width: 158px;
         height: 152px;
@@ -108,21 +115,33 @@
         #links button {
             width: 95%; /* Define a largura dos botões para ocupar toda a largura da tela */
         }
-        header {
+        .background-image0 {
             background-size: cover;
         }
     }
+    .custom-fade-in {
+        animation-duration: 2s; /* Define a duração da animação para 2 segundos */
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }        
 </style>
 </head>
 <body>
-<header class="text-center">
-    <div class="background-image"></div>
-    <section id="session-foto">
-        <div class="imagem-wrapper animate__animated animate__bounceInDown">
-            <img id="img-perfil" src="./img/galego.jpg" alt="">
-        </div>
-    </section>    
-</header>
+    <header class="text-center">
+        <div class="background-image"></div>
+        <div class="background-image0"></div> 
+        <section id="session-foto">
+            <div class="imagem-wrapper animate__animated">
+                <img id="img-perfil" class="animate__animated animate__zoomIn" src="./img/galego.jpg" alt="">
+            </div>
+        </section>   
+    </header>    
 <main class="container">
     <div id="infos" class="text-center animate__animated animate__fadeInUp">
         <h3 class="text-center text-white" style="margin-top: 4.5rem;">Ogalegoxl</h3>
@@ -139,7 +158,7 @@
 
     <div id="links" class="text-center animate__animated animate__fadeInLeft" style="margin-top: 2rem;">
         <li>
-            <a href="http://">
+            <a href="https://primeiravenda24hrss.com.br/">
                 <button class="rounded-1" style="font-size: .8rem;">
                     <i style="font-size: 1.5rem; margin-right:2rem;font-weight: 800;margin-left:1rem;" class="h5">$</i>
                     APRENDA A VENDER EM 24h💸
@@ -147,16 +166,16 @@
             <a href="https://www.instagram.com/ogalegoxl">
                 <button class="rounded-1">
                     <i style="font-size: 1.5rem; margin-right:2rem;margin-left:1rem;" class="fa-brands fa-instagram"></i>
-                    Instagram
+                    Me siga no Insta
                 </button></a><br>
             <a href="https://www.tiktok.com/@weslle7_?_t=8jb1On6mKQf&_r=1">
                 <button class="rounded-1">
                     <i style="font-size: 1.5rem; margin-right:2rem;margin-left:1rem;" class="fa-brands fa-tiktok" style="margin-left:5px;"></i>
-                    Tiktok
+                    Meu Tiktok
                 </button></a><br>
-            <a href="http://" target="_blank"></a>
+            <a href="http://wa.me/558491584725?text=Eae%20galego,%20tudo%20bem%20meu%20nobre?%20Quero%20aprender%20mais%20sobre,%20me%20chamo…" target="_blank"></a>
             <button class="rounded-1"><i style="font-size: 1.5rem;margin-right:2rem;margin-left:1rem;font-weight:600;" class="fa-brands fa-whatsapp"></i>
-                WhatsApp
+                Fale comigo agora
             </button></a><br>
         </li>
     </div>
